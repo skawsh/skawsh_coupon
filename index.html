@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skawsh Admin - Coupons & Offers</title>
+
+    <!-- Tailwind CDN (not recommended for prod, but works for now) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -16,26 +18,33 @@
                 500: '#3b82f6',
                 600: '#2563eb',
                 700: '#1d4ed8',
-                900: '#1e3a8a',
+                900: '#1e3a8a'
               }
             }
           }
         }
-      }
+      };
     </script>
-  <script type="importmap">
-{
-  "imports": {
-    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.1/",
-    "react": "https://aistudiocdn.com/react@^19.2.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
-  }
-}
-</script>
-</head>
+
+    <!-- Import map for dependencies -->
+    <script type="importmap">
+    {
+      "imports": {
+        "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+        "react/": "https://aistudiocdn.com/react@^19.2.1/",
+        "react": "https://aistudiocdn.com/react@^19.2.1",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+        "react-dom": "https://aistudiocdn.com/react-dom@^19.2.1"
+      }
+    }
+    </script>
+  </head>
+
   <body class="bg-slate-50 text-slate-900 antialiased">
     <div id="root"></div>
+
+    <!-- 👇 THIS SCRIPT MOUNTS YOUR REACT APP (CRUCIAL) -->
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
